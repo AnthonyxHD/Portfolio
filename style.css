@@ -1,0 +1,279 @@
+/* ----- GLOBAL ----- */
+body {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-size: 18.5px;;
+    margin: 0;
+    padding: 0;
+}
+/* Responsiveness on Screen Size */
+.navbar .container, .intro-container {
+    max-width: 992px; /* Limit width to 992px on larger screens */
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 auto; /* Center content */
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+/* Load External Fonts */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/proximanova_regular.ttf') format('truetype'),
+         url('fonts/proximanova_light.otf') format('opentype'),
+         url('fonts/proximanova_bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* ----- FONTS ----- */
+h1 {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 5px;
+}
+h2 {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+.footer-title {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 32px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    text-align: center;
+}
+.footer-text {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 18.5px;
+    line-height: 1.2;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+
+.footer-text-2 {
+    font-size: 16px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #555554;}
+    
+.footer-link:hover {
+    color: #bbbbbb; /* Hover Effect */ 
+} 
+
+
+
+
+
+/* ----- NAVIGATION ----- */
+.navbar {
+    background: #f3f3f2;
+}
+/* Title */
+.nav-title {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-size: 18.5px;
+    font-weight: bold;}  
+.no-hover-effect { /* No Visual Changes*/
+    pointer-events: all;
+    color: inherit;
+    text-decoration: none;}
+.no-hover-effect:hover {/* No Hover Changes */
+    background-color: transparent;
+    color: inherit;
+}
+/* Links */
+.nav-link {
+    font-size: 16px;
+    line-height: 1.2;} /* Reduce the line height for tighter spacing */
+.navbar-nav .nav-link:hover {
+    color: #bbbbbb; /* Hover Effect */ 
+} 
+ 
+    
+
+/* ----- INTRODUCTION ----- */
+.intro-container {
+    padding-bottom: 90px;}
+@media (max-width: 768px) {
+    .intro-container {
+        padding-bottom: 40px;} /* Reduce padding on smaller screens */
+}
+/* Portrait (Right) */
+img.rounded-circle {
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Introduction About Myself (Left) */
+.intro-container .row > .col-md-7 {
+    margin-left: -30px;
+    transition: margin-left 0.05s ease;} /* Smooth transition */
+/* Remove padding on smaller screens */
+@media (max-width: 768px) {
+    .intro-container .row > .col-md-7 {
+        margin-left: 0; /* Removes padding when the columns stack */
+        margin-top: 20px;}
+}
+
+
+
+/* ----- WORK ----- */
+
+.content-container {  /* Assures Same Sizes */
+    max-width: 992px; /* Limit width to 992px on larger screens */
+    width: 100%; /* Full width for smaller screens */
+    padding-top: 50px;
+    margin: 0 auto;
+}
+/* Layout */
+.content-container .row {
+    margin:0;
+    padding: 0;
+}
+.project-row {
+    border-radius: 20px; /* Rounded border */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    background-color: #ffffff; /* Background color for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 20px; /* Optional padding inside the border */
+}
+
+
+
+
+/* Content */
+.project-content {
+    background-color: #f3f3f2;
+    height: 400px;}
+.project-content:first-child {
+    padding: 0;
+}
+.project-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Project Styling */
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;}
+/* Keyword Styling */
+.project-keyword {
+    display: inline-block; /* Adjusts to the text size */
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000000; /* Text color */
+    background-color: rgba(0, 0, 0, 0.1); /* 50% transparency */
+    padding: 5px 20px; /* Add padding for a capsule shape */
+    border-radius: 20px; /* Rounded edges for the capsule */
+    margin: 15px 5px 15px 0;} /* Space between capsules */
+/* Description Styling */
+.project-description {
+    font-size: 24px;
+    line-height: 1.3;}
+/* Button Styling */
+.btn {
+    font-size: 18.5px;
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: background-color 0.3s ease;}
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+.footer {
+    margin-top: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.footer-container {  /* Assures Same Sizes */
+    max-width: 992px; /* Limit width to 992px on larger screens */
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.footer-container-2 {
+    max-width: 992px; /* Limit width to 992px on larger screens */
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;  /* Adjust size */
+    height: 45px; /* Adjust size */
+    border-radius: 50%;
+    background-color: #ffffff; /* LinkedIn blue */
+    color: rgba(0, 0, 0, 0.75); /* Icon color */
+    font-size: 22px; /* Icon size */
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.icon-circle i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+
+.linkedin:hover {
+    background-color: #0077b5; /* LinkedIn blue */
+    color: #ffffff; /* Icon color */
+}
+
+
+.github:hover {
+    color: #ffffff; /* Icon color */
+    background-color: black;
+
+}
+
+.email:hover {
+    background-color: #e4e4e4;
+    color: #c71610;
+}
