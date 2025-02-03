@@ -1,19 +1,16 @@
-/* ----- GLOBAL ----- */
+/* ===================== */
+/* === BASE & GLOBAL === */
+/* ===================== */
 body {
     font-family: 'Proxima Nova', Arial, sans-serif;
-    font-size: 18.5px;;
+    font-size: 20px;
+    line-height: 1.9;
     margin: 0;
     padding: 0;
+    color:#000000;
 }
-/* Responsiveness on Screen Size */
-.navbar .container, .intro-container {
-    max-width: 992px; /* Limit width to 992px on larger screens */
-    width: 100%; /* Full width for smaller screens */
-    margin: 0 auto; /* Center content */
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-/* Load External Fonts */
+
+/* External Fonts */
 @font-face {
     font-family: 'Proxima Nova';
     src: url('fonts/proximanova_regular.ttf') format('truetype'),
@@ -24,90 +21,109 @@ body {
 }
 
 
+/* ================== */
+/* === TYPOGRAPHY === */
+/* ================== */
 
-/* ----- FONTS ----- */
-h1 {
-    font-family: 'Proxima Nova', Arial, sans-serif;
+h1 { 
+    font-size: 40px;
     font-weight: bold;
-    font-size: 32px;
     padding-bottom: 5px;
 }
+
 h2 {
-    font-family: 'Proxima Nova', Arial, sans-serif;
-    font-weight: bold;
     font-size: 28px;
+    font-weight: bold;
     padding-bottom: 10px;
 }
+
+.description {
+    line-height: 1.3;}
+
 .footer-title {
-    font-family: 'Proxima Nova', Arial, sans-serif;
-    font-weight: bolder;
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: bold;
     padding-bottom: 5px;
-    color: #ffffff;
     text-align: center;
+    color: #ffffff;
 }
+
 .footer-text {
-    font-family: 'Proxima Nova', Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 18.5px;
+    font-weight: light;
     line-height: 1.2;
-    color: #ffffff;
     text-align: center;
+    color: #ffffff;
 }
 
-
-
-
-.footer-text-2 {
+.impressum {
     font-size: 16px;
     line-height: 1.2;
-    text-decoration: none;
-    color: #555554;}
-    
-.footer-link:hover {
-    color: #bbbbbb; /* Hover Effect */ 
-} 
+    color: #555554;
+}
 
 
+/* ===================== */
+/* === LAYOUT & GRID === */
+/* ===================== */
+
+/* Glabal Settings for Containers */
+.navbar .container, .intro-container {
+    max-width: 992px; /* Limit Width on Larger Screens */
+    width: 100%; /* Full Width on Smaller Screens */
+    margin: 0 auto; /* Center content */
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
 
 
-
-/* ----- NAVIGATION ----- */
+/* =================== */
+/* === COMPONENTS ==== */
+/* =================== */
 .navbar {
     background: #f3f3f2;
 }
-/* Title */
+
 .nav-title {
-    font-family: 'Proxima Nova', Arial, sans-serif;
     font-size: 18.5px;
-    font-weight: bold;}  
-.no-hover-effect { /* No Visual Changes*/
+    font-weight: bold;}
+.no-hover-effect { /* No Visual Changes for Title */
     pointer-events: all;
     color: inherit;
     text-decoration: none;}
-.no-hover-effect:hover {/* No Hover Changes */
+.no-hover-effect:hover { /* No Hover Changes for Title */
     background-color: transparent;
     color: inherit;
 }
-/* Links */
+
 .nav-link {
     font-size: 16px;
-    line-height: 1.2;} /* Reduce the line height for tighter spacing */
-.navbar-nav .nav-link:hover {
-    color: #bbbbbb; /* Hover Effect */ 
+    line-height: 1.2;}
+.navbar-nav .nav-link:hover { /* Hover for Nav-Links */
+    color: #bbbbbb;
 } 
- 
-    
 
-/* ----- INTRODUCTION ----- */
-.intro-container {
-    padding-bottom: 90px;}
+/* === LANDING PAGE ==== */
+
+/* --- Introduction --- */
+/* Responsiveness */
+.intro-container .row > .col-md-7 { /* Reduce Margin on Smaller Screens */
+    margin-left: -30px; /* Margin on Larger Screens */
+    transition: margin-left 0.05s ease;} /* Smooth transition */
+@media (max-width: 768px) {
+    .intro-container .row > .col-md-7 {
+        margin-left: 0; /* Margin on Smaller Screens */
+        margin-top: 20px;}
+}
+
+.intro-container { /* Reduce Padding on Smaller Screens */
+    padding-bottom: 90px;} /* Padding on Larger Screens */
 @media (max-width: 768px) {
     .intro-container {
-        padding-bottom: 40px;} /* Reduce padding on smaller screens */
+        padding-bottom: 40px;} /* Padding on Smaller Screens */
 }
-/* Portrait (Right) */
-img.rounded-circle {
+
+/* Portrait */
+img.rounded-circle { 
     display: block;
     margin: 0 auto;
     width: 220px;
@@ -115,29 +131,17 @@ img.rounded-circle {
     object-fit: cover;
     border-radius: 50%;
 }
-/* Introduction About Myself (Left) */
-.intro-container .row > .col-md-7 {
-    margin-left: -30px;
-    transition: margin-left 0.05s ease;} /* Smooth transition */
-/* Remove padding on smaller screens */
-@media (max-width: 768px) {
-    .intro-container .row > .col-md-7 {
-        margin-left: 0; /* Removes padding when the columns stack */
-        margin-top: 20px;}
-}
 
 
-
-/* ----- WORK ----- */
-
-.content-container {  /* Assures Same Sizes */
+/* --- Hihlighted Projects --- */
+.highlight-container {  /* Assures Same Sizes */
     max-width: 992px; /* Limit width to 992px on larger screens */
     width: 100%; /* Full width for smaller screens */
     padding-top: 50px;
     margin: 0 auto;
 }
 /* Layout */
-.content-container .row {
+.highlight-container .row {
     margin:0;
     padding: 0;
 }
@@ -148,6 +152,9 @@ img.rounded-circle {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
     padding: 20px; /* Optional padding inside the border */
 }
+
+
+
 
 
 
@@ -182,10 +189,7 @@ img.rounded-circle {
     padding: 5px 20px; /* Add padding for a capsule shape */
     border-radius: 20px; /* Rounded edges for the capsule */
     margin: 15px 5px 15px 0;} /* Space between capsules */
-/* Description Styling */
-.project-description {
-    font-size: 24px;
-    line-height: 1.3;}
+
 /* Button Styling */
 .btn {
     font-size: 18.5px;
@@ -284,4 +288,102 @@ img.rounded-circle {
     width: 100%;
     height: 500px;
     background-size: 100%;
+}
+
+
+
+
+
+
+/* ======================== */
+/* === PROJECT CONTENT ==== */
+/* ======================== */
+
+
+
+.details-container {  /* Assures Same Sizes */
+    max-width: 992px; /* Limit width to 992px on larger screens */
+    width: 100%; /* Full width for smaller screens */
+
+    margin: 0 auto;
+}
+/* Layout */
+.details-container .row {
+    margin:0;
+    padding: 0;
+}
+.details-container .row div:nth-child(1) {
+    border-right: 4px solid #f3f3f2;
+    border-bottom: 4px solid #f3f3f2;
+}
+.details-container .row div:nth-child(2) {
+    border-bottom: 4px solid #f3f3f2;
+}
+.details-container .row div:nth-child(3) {
+    border-right: 4px solid #f3f3f2;
+}
+@media (max-width: 768px) {
+    .details-container .row div:nth-child(1) {
+        border-right: none;
+    }
+    .details-container .row div:nth-child(3) {
+        border-right: none;
+        border-bottom: 4px solid #f3f3f2;
+    }
+}
+
+.details-content {
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: -15px;
+}
+.details-title {
+    font-size: 18.5px;
+    font-weight: bold;
+}
+
+.content-container {  /* Assures Same Sizes */
+    max-width: 992px; /* Limit width to 992px on larger screens */
+    width: 100%; /* Full width for smaller screens */
+    margin: 50px auto 0 auto;
+}
+.background {  /* Assures Same Sizes */
+    background-color: #f3f3f2;
+    padding-top: 10px;
+    padding-bottom: 50px;;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+
+.content-image {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.centric {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.painpoints {
+    font-size: 60px; /* Change size */
+    color: rgba(0, 0, 0, 0.75); /* Change color */
+}
+
+
+
+
+
+
+
+
+.details-row {
+    border-radius: 20px; /* Rounded border */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    background-color: #f3f3f2; /* Background color for visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 20px; /* Optional padding inside the border */
 }
